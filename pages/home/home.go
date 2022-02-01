@@ -11,6 +11,6 @@ type Page struct {
 
 func Home(w http.ResponseWriter, r *http.Request) {
 	p := Page{Title: "Home"}
-	t, _ := template.ParseFiles("templates/home.html", "templates/header.html")
+	t, _ := template.ParseFiles("templates/base.html", "templates/home.html")
 	t.Execute(w, p)
 }
